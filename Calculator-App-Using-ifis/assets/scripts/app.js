@@ -50,23 +50,23 @@ function CalculateResult(CalcType) {
     console.log("unknown operator");
   }
   createAndWriteOutput(mathOperator, initialResult, enteredNumber);
-  writeToLog(CalculateResult, initialResult, enteredNumber, currentResult);
+  writeToLog(CalcType, initialResult, enteredNumber, currentResult);
 }
 
-function add() {
-  CalculateResult("ADD");
-}
-function subtract() {
-  CalculateResult("SUB");
-}
-function multiply() {
-  CalculateResult("MUL");
-}
-function divide() {
-  CalculateResult("DIV");
-}
+// function add() {
+//   CalculateResult("ADD");
+// }
+// function subtract() {
+//   CalculateResult("SUB");
+// }
+// function multiply() {
+//   CalculateResult("MUL");
+// }
+// function divide() {
+//   CalculateResult("DIV");
+// }
 
-addBtn.addEventListener("click", add);
-subtractBtn.addEventListener("click", subtract);
-multiplyBtn.addEventListener("click", multiply);
-divideBtn.addEventListener("click", divide);
+addBtn.addEventListener("click", CalculateResult.bind(this, "ADD"));
+subtractBtn.addEventListener("click", CalculateResult.bind(this, "SUB"));
+multiplyBtn.addEventListener("click", CalculateResult.bind(this, "MUL"));
+divideBtn.addEventListener("click", CalculateResult.bind(this, "DIV"));
