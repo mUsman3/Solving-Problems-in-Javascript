@@ -5,6 +5,9 @@ const PAPER = "PAPER";
 const SCISSOR = "SCISSOR";
 const DEFAULT = "PAPER";
 let gameRunning = false;
+const DRAW = "Match is Draw";
+const PLYWIN = "PLAYER WIN";
+const COMPWIN = "COMPUTER WON";
 
 const playerChoice = function() {
   const selectOption = prompt(
@@ -42,7 +45,7 @@ const winner = function(compChoice, plyrChoice) {
   ) {
     return "Player win";
   } else {
-    return "Computer Win";
+    return "Computer win";
   }
 };
 
@@ -58,4 +61,31 @@ startGameBtn.addEventListener("click", function() {
   const ComputerChoice = computerChoice();
   const Winner = winner(ComputerChoice, playChoice);
   console.log(Winner);
+  let message = `You Picked ${playChoice} and player Picked ${ComputerChoice}, So `;
+  if (Winner === DRAW) {
+    message = message + "Draw";
+  } else if (Winner === PLYWIN) {
+    message = message + "You won";
+  } else if (Winner === COMPWIN) {
+    message = message + "Computer Won";
+  }
+  alert(message);
+  gameRunning = false;
 });
+
+/*
+
+   practice
+
+let sumUp = (...numbers) => {
+  let sum = 0;
+  for (const num of numbers) {
+    sum += num;
+  }
+  return sum;
+};
+
+console.log(sumUp(1, 23, 34, 5, 67654, 33));
+
+
+*/
