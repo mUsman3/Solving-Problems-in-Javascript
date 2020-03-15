@@ -9,7 +9,7 @@ const DRAW = "Match is Draw";
 const PLYWIN = "PLAYER WIN";
 const COMPWIN = "COMPUTER WON";
 
-const playerChoice = function() {
+const playerChoice = () => {
   const selectOption = prompt(
     `${ROCK}, ${PAPER} or ${SCISSOR}`,
     ""
@@ -25,7 +25,7 @@ const playerChoice = function() {
   return selectOption;
 };
 
-const computerChoice = function() {
+const computerChoice = () => {
   const randomValue = Math.random();
   if (randomValue < 0.33) {
     return PAPER;
@@ -36,7 +36,7 @@ const computerChoice = function() {
   }
 };
 
-const winner = function(compChoice, plyrChoice) {
+const winner = (compChoice, plyrChoice) => {
   if (compChoice === plyrChoice) {
     return "Match is Draw";
   } else if (
@@ -49,7 +49,7 @@ const winner = function(compChoice, plyrChoice) {
   }
 };
 
-startGameBtn.addEventListener("click", function() {
+startGameBtn.addEventListener("click", () => {
   if (gameRunning) {
     return;
   }
