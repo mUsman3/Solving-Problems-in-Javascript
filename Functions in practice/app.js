@@ -16,3 +16,4 @@ const person = {
 // person.fun();
 
 startGameBtn.addEventListener("click", func);
+startGameBtn.addEventListener("click", func);
