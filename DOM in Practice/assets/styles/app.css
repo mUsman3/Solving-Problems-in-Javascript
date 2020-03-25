@@ -21,7 +21,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 2.5rem;
-  background: #00329e;
+  background: #0f1521;
 }
 
 header h1 {
@@ -243,6 +243,7 @@ input:focus {
   from {
     transform: translateY(-5rem);
   }
+
   to {
     transform: translateY(0);
   }
